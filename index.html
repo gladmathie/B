@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Réservation – Soirée Solidaire</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #e2ecf2);
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #275fa1;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: 600;
+      margin-top: 15px;
+      display: block;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+    input[type="submit"] {
+      background-color: #275fa1;
+      color: white;
+      border: none;
+      margin-top: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #1d4781;
+    }
+    .note {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Réservation – Soirée Solidaire « L’Eau de Vie »</h2>
+    <form action="mailto:eaudevieassociation@gmail.com" method="POST" enctype="text/plain">
+
+      <label>Nom et prénom</label>
+      <input type="text" name="Nom_prenom" required>
+
+      <label>Email</label>
+      <input type="email" name="Email" required>
+
+      <label>Téléphone</label>
+      <input type="text" name="Telephone">
+
+      <label>Participerez-vous à l’évènement ?</label>
+      <select name="Participation" required>
+        <option value="">-- Choisir --</option>
+        <option value="oui">Oui, je serai présent(e)</option>
+        <option value="non">Non, je ne peux pas venir</option>
+      </select>
+
+      <label>Nombre de personnes (1 à 10)</label>
+      <select name="Nombre_personnes" required>
+        <option value="">-- Sélectionner --</option>
+        <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+        <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+        <option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+      </select>
+
+      <label>Nom, prénom et âge des participants</label>
+      <textarea name="Details_participants" rows="3" placeholder="Ex : Marie Dupont – adulte, Léo Dupont – 12 ans" required></textarea>
+
+      <label>Informations allergènes</label>
+      <textarea name="Allergenes" rows="2" placeholder="Facultatif"></textarea>
+
+      <label>Souhaitez-vous réserver des galettes ? (kg)</label>
+      <input type="number" name="Galettes_kg" min="0" step="0.5" placeholder="Ex : 1.5">
+
+      <label>Souhaitez-vous contribuer au projet mensuellement ?</label>
+      <select name="Contribuer">
+        <option value="">-- Sélectionner --</option>
+        <option value="Oui">Oui</option>
+        <option value="Non">Non</option>
+      </select>
+
+      <label>Avez-vous effectué le virement ?</label>
+      <select name="Virement" required>
+        <option value="">-- Sélectionner --</option>
+        <option value="Oui">Oui</option>
+        <option value="Non">Pas encore</option>
+        <option value="Rappel">Je souhaite un rappel</option>
+      </select>
+
+      <p class="note">💳 Virement à effectuer sur le compte <strong>BE28001170307020</strong> avec la communication « Souper solidaire 102025 ».<br>Prix : 40€/adulte – 20€/enfant (+10 ans)</p>
+
+      <input type="submit" value="Envoyer la réservation">
+
+    </form>
+  </div>
+
+</body>
+</html>
